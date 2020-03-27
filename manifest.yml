@@ -1,0 +1,12 @@
+---
+applications:
+- name: my-google-proxy
+  buildpacks:
+  - https://github.com/cloudfoundry/nginx-buildpack#v1.1.1
+  stack: cflinuxfs3
+  memory: 100M
+  disk_quota: 50M
+  instances: 1
+  random-route: true
+  env:
+    BACKEND: www.google.es
